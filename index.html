@@ -44,3 +44,15 @@
     <footer>Powered by Imran</footer>
 </body>
 </html>
+<!-- ভিজিটর কাউন্টার -->
+<div id="visitor-count" style="margin-top: 10px; font-size: 0.8rem; opacity: 0.6;">
+    Total Visits: <span id="count">Loading...</span>
+</div>
+
+<script>
+    fetch('https://api.countapi.xyz/hit/your-unique-site-name/visits')
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('count').innerText = data.value;
+        });
+</script>
